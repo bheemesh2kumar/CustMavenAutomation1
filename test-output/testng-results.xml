@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2043" started-at="2020-05-02T09:19:34Z" finished-at="2020-05-02T09:19:36Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2043" started-at="2020-05-02T09:19:34Z" finished-at="2020-05-02T09:19:36Z">
+      <class name="com.automation.TestRunner.TestRunner">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.automation.TestRunner.TestRunner@79ad8b2f]" name="setup" is-config="true" duration-ms="589" started-at="2020-05-02T09:19:34Z" finished-at="2020-05-02T09:19:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="testmethod(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.automation.TestRunner.TestRunner@79ad8b2f]" name="testmethod" duration-ms="1053" started-at="2020-05-02T09:19:35Z" data-provider="features" finished-at="2020-05-02T09:19:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Validation of DB results in mysql db]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testmethod -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.automation.TestRunner.TestRunner@79ad8b2f]" name="teardown" is-config="true" duration-ms="182" started-at="2020-05-02T09:19:36Z" finished-at="2020-05-02T09:19:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.automation.TestRunner.TestRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

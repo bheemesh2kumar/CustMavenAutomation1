@@ -4,3 +4,4 @@ Feature: Validation of DB results in mysql db
 Scenario: validation of Student table records in schoolinfo
 Given user is already connected to MySQL DB successfully
 When user retrives students information from student table
+Then check two tables student and student1 data is matched 

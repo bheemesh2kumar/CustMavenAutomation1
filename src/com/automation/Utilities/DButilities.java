@@ -40,5 +40,26 @@ public class DButilities {
 
 		return arrymap;
 	}
+	
+	
+	
+	
+	public void comparetables(ArrayList<Map<String, Object>> tableinfo)
+	{
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
 
 }

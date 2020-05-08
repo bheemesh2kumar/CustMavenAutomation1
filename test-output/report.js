@@ -30,18 +30,36 @@ formatter.step({
   "name": "user retrives students information from student table",
   "keyword": "When "
 });
+formatter.step({
+  "line": 7,
+  "name": "check two tables student and student1 data is matched",
+  "keyword": "Then "
+});
 formatter.match({
   "location": "DBStepDef.user_is_already_connected_to_MySQL_DB_successfully()"
 });
 formatter.result({
-  "duration": 812432324,
+  "duration": 836250278,
   "status": "passed"
 });
 formatter.match({
   "location": "DBStepDef.user_retrives_students_information_from_student_table()"
 });
 formatter.result({
-  "duration": 79829048,
+  "duration": 21720053,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 36
+    }
+  ],
+  "location": "DBStepDef.check_two_tables_student_and_student_data_is_matched(int)"
+});
+formatter.result({
+  "duration": 45285007,
   "status": "passed"
 });
 });

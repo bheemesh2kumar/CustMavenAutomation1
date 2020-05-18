@@ -34,7 +34,7 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.19.1</version>
 				<configuration>
-					<suiteXmlFile>C:\Users\home\Documents\CustomizedMavenProject1\CustMavenAutomation1\xmlfiles</suiteXmlFile>
+					<SuiteXmlFile>testng.xml</SuiteXmlFile>
 				</configuration>
 
 			</plugin>
@@ -141,6 +141,7 @@
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>6.14.3</version>
+
 
 		</dependency>
 

@@ -2,31 +2,31 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2009" started-at="2020-05-06T17:48:39Z" finished-at="2020-05-06T17:48:41Z">
+  <suite name="Suite" duration-ms="61035" started-at="2020-05-17T06:47:45Z" finished-at="2020-05-17T06:48:46Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2009" started-at="2020-05-06T17:48:39Z" finished-at="2020-05-06T17:48:41Z">
-      <class name="com.automation.TestRunner.TestRunner">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.automation.TestRunner.TestRunner@79ad8b2f]" name="setup" is-config="true" duration-ms="524" started-at="2020-05-06T17:48:39Z" finished-at="2020-05-06T17:48:39Z">
+    <test name="Test" duration-ms="61035" started-at="2020-05-17T06:47:45Z" finished-at="2020-05-17T06:48:46Z">
+      <class name="com.automation.TestRunner.Testrunner">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.automation.TestRunner.Testrunner@79ad8b2f]" name="setup" is-config="true" duration-ms="745" started-at="2020-05-17T06:47:45Z" finished-at="2020-05-17T06:47:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testmethod(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.automation.TestRunner.TestRunner@79ad8b2f]" name="testmethod" duration-ms="1067" started-at="2020-05-06T17:48:39Z" data-provider="features" finished-at="2020-05-06T17:48:40Z">
+        <test-method status="PASS" signature="testmethod(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.automation.TestRunner.Testrunner@79ad8b2f]" name="testmethod" duration-ms="59480" started-at="2020-05-17T06:47:46Z" data-provider="features" finished-at="2020-05-17T06:48:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Validation of DB results in mysql db]]>
+                <![CDATA[validation of bookatable module]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testmethod -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.automation.TestRunner.TestRunner@79ad8b2f]" name="teardown" is-config="true" duration-ms="214" started-at="2020-05-06T17:48:40Z" finished-at="2020-05-06T17:48:41Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.automation.TestRunner.Testrunner@79ad8b2f]" name="teardown" is-config="true" duration-ms="279" started-at="2020-05-17T06:48:46Z" finished-at="2020-05-17T06:48:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.automation.TestRunner.TestRunner -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.automation.TestRunner.Testrunner -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

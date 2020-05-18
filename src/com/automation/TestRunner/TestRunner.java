@@ -16,11 +16,11 @@ import cucumber.api.testng.CucumberFeatureWrapper;
 		"html:test-output" },
 		monochrome = true, 
 		dryRun = false,
-		tags= {"@studentinfo"}
+		tags= {"@goldpartnertestcase,@booktable"}
 
 )
 
-public class TestRunner {
+public class Testrunner {
 
 	public TestNGCucumberRunner TestNgcucumberRunner;
 

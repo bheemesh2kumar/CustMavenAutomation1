@@ -3,6 +3,7 @@ package com.automation.StepDef;
 import java.util.List;
 import java.util.Map;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -162,26 +163,93 @@ public class ZamotoStepDef {
 	}
 
 	@Then("^validate that if user is able to click all category items$")
-	public void validate_that_if_user_is_able_to_click_all_category_items()  {
+	public void validate_that_if_user_is_able_to_click_all_category_items() {
 
 		if (CommonUtilitiesref == null) {
 			CommonUtilitiesref = new CommonUtilities();
 		}
-		
-		int counter=0;
+
+		int counter = 0;
 
 		for (WebElement ele : ZomatoBooktablepageref.sortbyelemetns) {
-			
-			if(ele.isDisplayed())
-			{
+
+			if (ele.isDisplayed()) {
 				counter++;
 			}
 		}
-		
-		
-		System.out.println("Total sort by items are" + "  " + counter +" " +"displayed");
+
+		System.out.println("Total sort by items are" + "  " + counter + " " + "displayed");
 
 		ApplicationSetupref.teardown();
+	}
+
+	@Then("^check if user can see Zomoto gold partner check box deselet by default$")
+	public void check_if_user_can_see_Zomoto_gold_partner_check_box_deselet_by_default() {
+
+		ZomatoBooktablepageref = new ZomatoBooktablepage(driver);
+
+		Assert.assertTrue(!ZomatoBooktablepageref.ZomatoGoldpartnercheckbox.isSelected(),
+				"zomototgoldpartnercheckbox is not selected by default");
+
+	}
+
+	@Then("^user clicks on Zomoto gold partner check box$")
+	public void user_clicks_on_Zomoto_gold_partner_check_box() {
+
+		ZomatoBooktablepageref.ZomatoGoldpartnercheckbox.click();
+
+		Assert.assertTrue(ZomatoBooktablepageref.ZomatoGoldpartnercheckboxafterselected.isDisplayed(),
+				"zomototgoldpartnercheckbox is not selected");
+
+	}
+
+	@Then("^validate that if user can see page number\"([^\"]*)\"$")
+	public void validate_that_if_user_can_see_page_number(String arg1) {
+
+		String pagenumbers = ZomatoBooktablepageref.paginationnumbers.getText();
+
+		Assert.assertEquals(pagenumbers, arg1, "pagenation number is not displayed");
+
+	}
+
+	@Then("^validate that if user can see left angle icon disable format$")
+	public void validate_that_if_user_can_see_left_angle_icon_disable_format() {
+
+		String flag = ZomatoBooktablepageref.leftangleindisable.findElement(By.xpath("parent::div/parent::div"))
+				.getAttribute("aria-hidden");
+		System.out.println("*******************" + flag);
+
+		Assert.assertTrue(flag.equals("true"));
+
+	}
+
+	@Then("^validate that if user can see all navigation numbers show data navigationnumbers when mouseover on numbers$")
+	public void validate_that_if_user_can_see_all_navigation_numbers_show_data_navigationnumbers_when_mouseover_on_numbers(
+			DataTable arg1) {
+
+		int i = 0;
+
+		for (Map<String, String> mapval : arg1.asMaps(String.class, String.class))
+
+		{
+
+			Assert.assertTrue(ZomatoBooktablepageref.gotopageslinks.get(i).getAttribute("title")
+					.equals(mapval.get("navigationnumbers")));
+
+			System.out.println(ZomatoBooktablepageref.gotopageslinks.get(i).getAttribute("title") + " "
+					+ "is matched successsfully");
+
+			i++;
+
+		}
+
+	}
+
+	@Then("^validate that if user can see right angle icon enable format$")
+	public void validate_that_if_user_can_see_right_angle_icon_enable_format() {
+
+		ApplicationSetupref.teardown();
+
 	}
 
 }
